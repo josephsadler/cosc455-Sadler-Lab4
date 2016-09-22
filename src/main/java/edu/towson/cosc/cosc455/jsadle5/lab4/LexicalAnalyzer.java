@@ -70,7 +70,9 @@ public class LexicalAnalyzer {
         lexems.add("ates"); lexems.add("lovez"); lexems.add("hatez");
 
 		lexems.add("happy"); lexems.add("fat"); lexems.add("mean"); lexems.add("hungry");
-    }
+
+		lexems.add("secretly"); lexems.add("accidentally"); lexems.add("quickly");
+	}
 
     private boolean lookup(String candidateToken){
         if(!lexems.contains(candidateToken)){
