@@ -68,6 +68,8 @@ public class LexicalAnalyzer {
         lexems.add("\n");lexems.add("teh"); lexems.add("a");
         lexems.add("dawg"); lexems.add("kat"); lexems.add("rat");
         lexems.add("ates"); lexems.add("lovez"); lexems.add("hatez");
+
+		lexems.add("happy"); lexems.add("fat"); lexems.add("mean"); lexems.add("hungry");
     }
 
     private boolean lookup(String candidateToken){
