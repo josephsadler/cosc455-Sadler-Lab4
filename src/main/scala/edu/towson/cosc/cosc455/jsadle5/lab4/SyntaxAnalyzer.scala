@@ -24,6 +24,7 @@ class SyntaxAnalyzer {
   def Sentence() = {
     resetError()
     if (!errorFound) NounPhrase()
+    if (!errorFound) Adverb()
     if (!errorFound) Verb()
     if (!errorFound) NounPhrase()
   }
@@ -38,10 +39,7 @@ class SyntaxAnalyzer {
   def Adjective() = {
     if (ADJECTIVES contains Compiler.currentToken)
       Compiler.Scanner.getNextToken()
-    else {
-      println("SYNTAX ERROR - An adjective was expected when '" + Compiler.currentToken + "' was found.")
-      setError()
-    }
+    else {} //optional
   }
 
   // This method implements the BNF rule for a verb <V> ::= ates | hatez | hatez
@@ -77,5 +75,6 @@ class SyntaxAnalyzer {
   def Adverb() = {
     if (ADVERB contains Compiler.currentToken)
       Compiler.Scanner.getNextToken()
+    else {} //optional
   }
 }
